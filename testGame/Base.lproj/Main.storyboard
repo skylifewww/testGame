@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOp-3S-788">
+                                <rect key="frame" x="65" y="28" width="496" height="381"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epD-2n-WKc">
+                                <rect key="frame" x="300" y="458" width="38" height="30"/>
+                                <state key="normal" title="down">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-QK-7zn">
+                                <rect key="frame" x="250" y="458" width="30" height="30"/>
+                                <state key="normal" title="left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeK-7B-EzS">
+                                <rect key="frame" x="304" y="432" width="30" height="30"/>
+                                <state key="normal" title="up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTN-VH-tLl">
+                                <rect key="frame" x="357" y="458" width="31" height="30"/>
+                                <state key="normal" title="right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HML-pB-jxL">
+                                <rect key="frame" x="35" y="458" width="171" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="bmN-f0-D2D"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="epD-2n-WKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="271" id="2d9-eM-K9x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hOp-3S-788" secondAttribute="trailing" constant="23" id="4RN-5m-Tmj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="epD-2n-WKc" secondAttribute="bottom" constant="55" id="9cJ-iq-jfS"/>
+                            <constraint firstAttribute="centerX" secondItem="DeK-7B-EzS" secondAttribute="centerX" constant="-19" id="C4P-RC-ak7"/>
+                            <constraint firstItem="CzM-QK-7zn" firstAttribute="leading" secondItem="DeK-7B-EzS" secondAttribute="leading" constant="-54" id="F2S-3M-VV1"/>
+                            <constraint firstItem="HML-pB-jxL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="Ius-Mw-JBp"/>
+                            <constraint firstItem="DeK-7B-EzS" firstAttribute="trailing" secondItem="QTN-VH-tLl" secondAttribute="trailing" constant="-54" id="Qej-76-co7"/>
+                            <constraint firstItem="QTN-VH-tLl" firstAttribute="top" secondItem="DeK-7B-EzS" secondAttribute="bottom" constant="-4" id="T0u-Sa-Qu4"/>
+                            <constraint firstItem="epD-2n-WKc" firstAttribute="centerX" secondItem="DeK-7B-EzS" secondAttribute="centerX" id="Tas-ST-goh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HML-pB-jxL" secondAttribute="bottom" constant="114" id="WQg-00-cXd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hOp-3S-788" secondAttribute="bottom" constant="199" id="Xh5-bK-g15"/>
+                            <constraint firstItem="CzM-QK-7zn" firstAttribute="top" secondItem="DeK-7B-EzS" secondAttribute="bottom" constant="-4" id="YIb-K1-Lik"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CzM-QK-7zn" secondAttribute="bottom" constant="112" id="ZDb-Go-MTq"/>
+                            <constraint firstItem="epD-2n-WKc" firstAttribute="top" secondItem="DeK-7B-EzS" secondAttribute="bottom" constant="-4" id="ha2-8X-cIi"/>
+                            <constraint firstItem="epD-2n-WKc" firstAttribute="top" secondItem="DeK-7B-EzS" secondAttribute="bottom" constant="53" id="iVd-wu-SHr"/>
+                            <constraint firstItem="DeK-7B-EzS" firstAttribute="top" secondItem="hOp-3S-788" secondAttribute="bottom" constant="23" id="k5C-J4-Inw"/>
+                            <constraint firstItem="CzM-QK-7zn" firstAttribute="leading" secondItem="HML-pB-jxL" secondAttribute="trailing" constant="44" id="kBv-Ld-Nbc"/>
+                            <constraint firstItem="hOp-3S-788" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="my8-Re-4Pi"/>
+                            <constraint firstItem="DeK-7B-EzS" firstAttribute="top" secondItem="hOp-3S-788" secondAttribute="bottom" constant="23" id="tjQ-ot-jgN"/>
+                            <constraint firstItem="hOp-3S-788" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="49" id="tvU-hm-Whm"/>
+                            <constraint firstAttribute="centerY" secondItem="DeK-7B-EzS" secondAttribute="centerY" constant="-147" id="zNi-Pe-Lbj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kBv-Ld-Nbc"/>
+                                <exclude reference="tjQ-ot-jgN"/>
+                                <exclude reference="2d9-eM-K9x"/>
+                                <exclude reference="iVd-wu-SHr"/>
+                                <exclude reference="9cJ-iq-jfS"/>
+                                <exclude reference="Xh5-bK-g15"/>
+                                <exclude reference="ZDb-Go-MTq"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="hOp-3S-788" id="MAJ-i5-JHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
